@@ -21,16 +21,16 @@ repositories {
 
 dependencies {
     val cmVer = "0.24.0"
-    implementation("org.commonmark:commonmark:$cmVer")
-    implementation("org.commonmark:commonmark-ext-autolink:${cmVer}")
-    implementation("org.commonmark:commonmark-ext-footnotes:${cmVer}")
-    implementation("org.commonmark:commonmark-ext-gfm-strikethrough:${cmVer}")
-    implementation("org.commonmark:commonmark-ext-gfm-tables:${cmVer}")
-    implementation("org.commonmark:commonmark-ext-heading-anchor:${cmVer}")
-    implementation("org.commonmark:commonmark-ext-image-attributes:${cmVer}")
-    implementation("org.commonmark:commonmark-ext-ins:$cmVer")
-    implementation("org.commonmark:commonmark-ext-task-list-items:${cmVer}")
-    implementation("org.commonmark:commonmark-ext-yaml-front-matter:$cmVer")
+    api("org.commonmark:commonmark:$cmVer")
+    api("org.commonmark:commonmark-ext-autolink:${cmVer}")
+    api("org.commonmark:commonmark-ext-footnotes:${cmVer}")
+    api("org.commonmark:commonmark-ext-gfm-strikethrough:${cmVer}")
+    api("org.commonmark:commonmark-ext-gfm-tables:${cmVer}")
+    api("org.commonmark:commonmark-ext-heading-anchor:${cmVer}")
+    api("org.commonmark:commonmark-ext-image-attributes:${cmVer}")
+    api("org.commonmark:commonmark-ext-ins:$cmVer")
+    api("org.commonmark:commonmark-ext-task-list-items:${cmVer}")
+    api("org.commonmark:commonmark-ext-yaml-front-matter:$cmVer")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.12.1")
     testImplementation("org.assertj:assertj-core:3.27.3")
