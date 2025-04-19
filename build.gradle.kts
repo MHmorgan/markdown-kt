@@ -11,20 +11,26 @@ plugins {
     id("org.jetbrains.dokka") version "1.9.20"
 
     `java-library`
-    // application // Java CLI application
 }
 
-group = "org.example"
+group = "games.soloscribe"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
-
-    compileOnly("org.jetbrains:annotations:26.0.2") // IDE support annotations
+    val cmVer = "0.24.0"
+    implementation("org.commonmark:commonmark:$cmVer")
+    implementation("org.commonmark:commonmark-ext-autolink:${cmVer}")
+    implementation("org.commonmark:commonmark-ext-footnotes:${cmVer}")
+    implementation("org.commonmark:commonmark-ext-gfm-strikethrough:${cmVer}")
+    implementation("org.commonmark:commonmark-ext-gfm-tables:${cmVer}")
+    implementation("org.commonmark:commonmark-ext-heading-anchor:${cmVer}")
+    implementation("org.commonmark:commonmark-ext-image-attributes:${cmVer}")
+    implementation("org.commonmark:commonmark-ext-ins:$cmVer")
+    implementation("org.commonmark:commonmark-ext-task-list-items:${cmVer}")
+    implementation("org.commonmark:commonmark-ext-yaml-front-matter:$cmVer")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.12.1")
     testImplementation("org.assertj:assertj-core:3.27.3")
@@ -35,14 +41,16 @@ kotlin {
     jvmToolchain(17)
 }
 
-// application {
-//     mainClass.set("org.example.MainKt")
-// }
-
 tasks.named<Test>("test") {
     useJUnitPlatform()
 }
 
-tasks.dokkaGfm {
+tasks.dokkaHtml {
     outputDirectory.set(file("$rootDir/docs"))
+
+    dokkaSourceSets {
+        named("main") {
+            includes.from("DOC.md")
+        }
+    }
 }
