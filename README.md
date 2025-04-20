@@ -7,28 +7,6 @@ Kotlin wrapper around [commonmark-java](https://github.com/commonmark/commonmark
 
 ## Usage
 
-Use git submodule to include this library in your project:
-
-```shell
-git submodule add git@github.com:MHmorgan/markdown-kt.git libs/markdown-kt
-```
-
-Add the following to your `settings.gradle.kts`:
-
-```kotlin
-includeBuild("libs/markdown-kt")
-```
-
-Then add the following to your `build.gradle.kts`:
-
-```kotlin
-dependencies {
-    implementation("games.soloscribe:markdown")
-}
-```
-
-Example usage:
-
 ```kotlin
 import games.soloscribe.markdown.renderMarkdown
 
@@ -49,5 +27,28 @@ fun main() {
     }
     
     println(rendered.html)
+}
+```
+
+## Submodule Dependency
+
+Use [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+to include this library in your project:
+
+```shell
+git submodule add git@github.com:MHmorgan/markdown-kt.git libs/markdown-kt
+```
+
+Add the following to your `settings.gradle.kts`:
+
+```kotlin
+includeBuild("libs/markdown-kt")
+```
+
+Then add the following to your `build.gradle.kts`:
+
+```kotlin
+dependencies {
+    implementation("games.soloscribe:markdown")
 }
 ```
