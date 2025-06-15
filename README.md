@@ -8,7 +8,7 @@ Kotlin wrapper around [commonmark-java](https://github.com/commonmark/commonmark
 ## Usage
 
 ```kotlin
-import games.soloscribe.markdown.renderMarkdown
+import dev.hirth.markdown.renderMarkdown
 
 fun main() {
     val md = """
