@@ -1,4 +1,4 @@
-package games.soloscribe.markdown
+package dev.hirth.markdown
 
 import org.commonmark.ext.autolink.AutolinkExtension
 import org.commonmark.ext.footnotes.FootnoteDefinition

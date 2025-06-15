@@ -1,4 +1,4 @@
-package games.soloscribe.markdown
+package dev.hirth.markdown
 
 data class Rendered(
     val html: String,
