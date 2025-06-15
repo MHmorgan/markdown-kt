@@ -1,4 +1,4 @@
-package games.soloscribe.markdown
+package dev.hirth.markdown
 
 /**
  * Configuration of Markdown extensions.

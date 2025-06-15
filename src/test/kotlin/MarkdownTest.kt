@@ -1,4 +1,4 @@
-package games.soloscribe.markdown
+package dev.hirth.markdown
 
 import org.assertj.core.api.Assertions.assertThat
 import org.commonmark.node.AbstractVisitor

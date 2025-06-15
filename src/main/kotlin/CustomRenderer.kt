@@ -1,4 +1,4 @@
-package games.soloscribe.markdown
+package dev.hirth.markdown
 
 import org.commonmark.node.Node
 import org.commonmark.renderer.html.HtmlNodeRendererContext
